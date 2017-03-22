@@ -9,7 +9,7 @@ Uzyteczne komendy:
  Wyniki:
 
 | Git profile 						| Name 					| start_thread | counter | procon | Attendance | Engagement |
-| ----------- 						| ---- 					| ------------ | ------- | ------ | --- | ---------- | ---------- |
+| ----------- 						| ---- 					| ------------ | ------- | ------ | ---------- | ---------- |
 | https://github.com/piotrfatner 	| Piotr Fatner 			|   |   |   | 2 |   |
 | https://github.com/patoor 		| Batosz Patora  		|   |   |   | 2 |   |
 | https://github.com/rafzz  		| Rafal Szmigiel 		|   |   |   | 2 |   |
