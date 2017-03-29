@@ -15,7 +15,7 @@ public class BufferManualImpl implements Buffer {
 
 	private final Queue<Order> orders = new LinkedList<Order>();
 	private final ReentrantLock lock = new ReentrantLock();
-	private final Condition inNotEmpty = lock.newCondition();
+	private final Condition isNotEmpty = lock.newCondition();
 	private final Condition isNotFull = lock.newCondition();
 
 	public void submitOrder(Order order) throws InterruptedException {
@@ -23,7 +23,7 @@ public class BufferManualImpl implements Buffer {
 		try {
 			waitTillFull();
 			orders.add(order);
-			inNotEmpty.signal();
+			isNotEmpty.signal();
 		} finally {
 			lock.unlock();
 		}
@@ -48,6 +48,6 @@ public class BufferManualImpl implements Buffer {
 
 	private void waitTillEmpty() throws InterruptedException {
 		while (orders.isEmpty())
-			inNotEmpty.await();
+			isNotEmpty.await();
 	}
 }
